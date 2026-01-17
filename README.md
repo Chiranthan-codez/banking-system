@@ -62,7 +62,7 @@ workon {{project_name}}   # reactivate existing environment
 
 Clone GitHub Project,
 ```bash
-git@github.com:saadmk11/banking-system.git
+git@github.com:Chiranthan-codez/banking-system.git
 
 cd banking-system
 ```
