@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 #po0172$69b@78ps4v^uhfxu6q--8ko7kpp7rbz420s_3w#sir%
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('po0172$69b@78ps4v^uhfxu6q--8ko7kpp7rbz420s_3w#sir%')
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -91,7 +91,8 @@ WSGI_APPLICATION = 'banking_system.wsgi.application'
 }"""
 DATABASES = {
     "default": dj_database_url.config(
-        default=os.getenv("DATABASE_URL"),
+       # default=os.getenv("DATABASE_URL"),
+        default="sqlite:///db.sqlite3",
         conn_max_age=600,
         ssl_require=True
     )
