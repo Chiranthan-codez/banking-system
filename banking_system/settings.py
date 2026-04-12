@@ -155,3 +155,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 MIDDLEWARE.insert(1, "whitenoise.middleware.WhiteNoiseMiddleware")
+
+# Pinger settings for keeping Render server alive
+PING_URL = os.getenv("PING_URL", "https://banking-system-8yxx.onrender.com/ping/")

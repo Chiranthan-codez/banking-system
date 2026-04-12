@@ -16,11 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
-from core.views import HomeView
+from core.views import HomeView, ping
 
 
 urlpatterns = [
     path('', HomeView.as_view(), name='home'),
+    path('ping/', ping, name='ping'),
     path('accounts/', include('accounts.urls', namespace='accounts')),
     path('admin/', admin.site.urls),
     path(
